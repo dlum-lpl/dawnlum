@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Inter:400,500,700&display=swap');
+
+body {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  background: #f6f8fb;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+header, footer {
+  background: #1159aa;
+  color: #fff;
+  padding: 2em 0 1.3em 0;
+  text-align: center;
+}
+header h1 {
+  font-size: 2.8em;
+  font-weight: 700;
+  margin-bottom: 0.3em;
+  letter-spacing: -1px;
+}
+header h2 {
+  font-size: 1.5em;
+  font-weight: 500;
+  margin-bottom: 0.9em;
+}
+main {
+  max-width: 880px;
+  margin: 2em auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 7px 26px #cad7e5;
+  padding: 2.5em 2em 2em 2em;
+}
+h3 {
+  color: #1159aa;
+  font-size: 1.22em;
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.9em;
+}
+.summary {
+  font-size: 1.12em;
+  font-weight: 500;
+  background: #eaf2fc;
+  border-radius: 8px;
+  margin-bottom: 1.3em;
+  padding: 1.2em;
+  box-shadow: 0 1px 6px #e1e9f2;
+}
+ul.skills-list, ul.stats-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  list-style: none;
+  padding: 1em 0 0.7em 0;
+  margin: 0;
+}
+.skills-list li, .stats-list li {
+  background: #eaf2fc;
+  border-radius: 8px;
+  padding: 0.8em 1.3em;
+  font-size: 1em;
+}
+section {
+  margin-bottom: 1.5em;
+}
+a {
+  color: #0b3a73;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+a:hover {
+  color: #2177d6;
+  text-decoration: underline;
+}
+.contact-links {
+  margin: 1.2em 0;
+  font-size: 1.11em;
+}
+.contact-links a {
+  color: #ffec8a;
+  background: #165baf;
+  margin: 0 0.4em;
+  border-radius: 4px;
+  padding: 0.4em 1em;
+  transition: background .2s, color .2s;
+}
+.contact-links a:hover {
+  background: #fff;
+  color: #1159aa;
+}
+
+footer {
+  margin-top: 3em;
+  background: #132e51;
+  padding-bottom: 1.2em;
+  border-top: 4px solid #155595;
+  font-size: 0.99em;
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 1.1em 0.7em 1em 0.7em;
+  }
+  ul.skills-list, ul.stats-list {
+    flex-direction: column;
+    gap: 0.7em;
+  }
+  header h1 {
+    font-size: 2em;
+  }
+}
