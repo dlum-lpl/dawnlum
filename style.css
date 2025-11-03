@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Inter:400,500,700&display=swap');
+
+/* Core styles */
 body {
   margin: 0;
   font-family: 'Inter', system-ui, Arial, sans-serif;
@@ -10,6 +12,8 @@ body {
   margin: 0 auto;
   padding: 0 20px;
 }
+
+/* Navigation */
 nav {
   background: #10396a;
   padding: 0.5em 0;
@@ -39,14 +43,14 @@ nav ul li a {
   font-weight: 500;
   text-decoration: none;
   transition: color 0.2s;
-  padding: 0.1em 0.2em;
+  padding: 0.3em 0.4em;
 }
 nav ul li .resume-btn {
   background: #ffd966;
   color: #1d202a;
   border-radius: 4px;
-  padding: 0.1em 0.2em;
-  margin-left: 0.1em;
+  padding: 0.3em 1.0em;
+  margin-left: 0.5em;
   font-weight: 700;
   transition: background 0.2s, color 0.2s;
 }
@@ -57,6 +61,8 @@ nav ul li .resume-btn:hover {
 nav ul li a:hover {
   color: #ffd966;
 }
+
+/* Hero section */
 .hero {
   background: linear-gradient(135deg, #f0f5ff 50%, #e5ecf8 100%);
   padding: 3.4em 0 2.3em;
@@ -124,6 +130,8 @@ nav ul li a:hover {
 .linkedin-btn {
   background: #1387c6;
 }
+
+/* Responsive for hero & web */
 @media (max-width: 800px) {
   .hero-content { flex-direction: column; gap: 1.2em;}
   nav .wrapper { flex-direction: column;}
@@ -137,6 +145,8 @@ main {
 }
 section + section { margin-top: 2em; }
 h3 { font-size: 1.33em; color: #17315a; }
+
+/* Cards for work and recommendations */
 .card {
   background: #f5faff;
   border-radius: 9px;
@@ -145,21 +155,37 @@ h3 { font-size: 1.33em; color: #17315a; }
   padding: 1.6em 1.5em;
 }
 .card h4 { font-size: 1.24em; color: #155595; margin:0 0 0.3em 0;}
-h5 { font-size: 0.95em; color: #415978; margin:0 0 0.1em 0;}
 .role-meta { font-size: 0.98em; color: #415978; margin-bottom:0.5em; }
 .work-cards{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:1.3em;}
 @media (max-width: 970px) { .work-cards { grid-template-columns:1fr 1fr;} }
 @media (max-width: 670px) { .work-cards { grid-template-columns:1fr;} }
-.skills-list { display:flex; flex-wrap:wrap; gap:0.9em; margin-top:1.3em; padding:0;}
-.skills-list li {
+
+.skills-list, .stats-list {
+  display:flex;
+  flex-wrap:wrap;
+  gap:0.9em;
+  margin-top:1.3em;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+  list-style: none;
+}
+.skills-list li, .stats-list li {
   background: #e3f3ff;
   color: #105cca;
-  font-weight: 500;
+  font-weight: 600;
   border-radius: 5px;
-  padding: 0.2em 0.2em;
-  list-style: none;
-  font-size: 1.0em;
+  padding: 0.5em 1em;
+  font-size: 1em;
 }
+
+/* Indent removal for ALL lists */
+ul, ol {
+  margin-left: 0;
+  padding-left: 0;
+  list-style-position: outside;
+}
+
+/* Testimonials and Recommendations */
 .testimonials { display:flex; flex-wrap:wrap; gap:2em; margin-top:0.8em;}
 blockquote {
   display: block;
@@ -167,7 +193,7 @@ blockquote {
   border-left: 5px solid #ffd966;
   border-radius:6px;
   padding: 1em 1.3em;
-  font-size: 0.95em;
+  font-size: 1.09em;
   color: #16324e;
   margin: 0;
   flex:1;
@@ -178,7 +204,49 @@ blockquote span {
   font-size:0.97em;
   color: #53585f;
 }
+
+/* Recommendations cards */
+#recommendations { margin-top:3em; }
+#recommendations h4 {
+  color:#1762a8;
+  font-size:1.13em;
+  margin:2em 0 0.2em 0;
+  font-weight: 600;
+}
+.rec-cards {
+  display: flex;
+  gap: 1.5em;
+  flex-wrap: wrap;
+  margin-bottom:1.5em;
+}
+.rec-cards blockquote {
+  flex:1 1 360px;
+  background: #f3f9fe;
+  border-left: 5px solid #105cca;
+  border-radius: 7px;
+  padding: 1em 1.3em 1em 1.3em;
+  margin: 0;
+  font-size: 1.04em;
+  color: #17315a;
+  box-shadow:0 2px 8px #f0f4fbcc;
+}
+.rec-cards blockquote strong {
+  display:block;
+  color:#0c447c;
+  margin-bottom:0.1em;
+  font-size:0.97em;
+}
+@media (max-width:700px){
+  .rec-cards{flex-direction:column;}
+}
+
+/* Inline link style */
+.inline-link { color:#0a6dbb; font-weight:500; text-decoration:underline; }
+.inline-link:hover { color:#ffb300; }
+
+/* Contact section */
 #contact p { font-size: 1.10em; }
+
 footer {
   background: #174578;
   color: #fff;
@@ -188,5 +256,24 @@ footer {
   border-radius: 0 0 14px 14px;
   font-size: 1em;
 }
-.inline-link { color:#0a6dbb; font-weight:500; text-decoration:underline; }
-.inline-link:hover { color:#ffb300; }
+
+/* h5 custom styles for small, unbold subheaders & removal of indent from content */
+h5 {
+  font-size: 1em;
+  font-weight: 400;
+  margin: 1.3em 0 0.3em 0;
+  padding: 0;
+  color: #14253c;
+}
+
+/* Remove indent for content after h5 */
+h5 + ul,
+h5 + ol {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  list-style-position: outside;
+}
+h5 + p {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
