@@ -39,14 +39,14 @@ nav ul li a {
   font-weight: 500;
   text-decoration: none;
   transition: color 0.2s;
-  padding: 0.3em 0.4em;
+  padding: 0.1em 0.2em;
 }
 nav ul li .resume-btn {
   background: #ffd966;
   color: #1d202a;
   border-radius: 4px;
-  padding: 0.3em 1.0em;
-  margin-left: 0.5em;
+  padding: 0.1em 0.2em;
+  margin-left: 0.1em;
   font-weight: 700;
   transition: background 0.2s, color 0.2s;
 }
@@ -153,9 +153,9 @@ h3 { font-size: 1.33em; color: #17315a; }
 .skills-list li {
   background: #e3f3ff;
   color: #105cca;
-  font-weight: 600;
+  font-weight: 500;
   border-radius: 5px;
-  padding: 0.5em 1em;
+  padding: 0.1em 0.2em;
   list-style: none;
   font-size: 1.0em;
 }
