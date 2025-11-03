@@ -260,8 +260,8 @@ footer {
 /* h5 custom styles for small, unbold subheaders & removal of indent from content */
 h5 {
   font-size: 1em;
-  font-weight: 400;
-  margin: 1.3em 0 0.3em 0;
+  font-weight: 300;
+  margin: 0.3em 0 0.3em 0;
   padding: 0;
   color: #14253c;
 }
